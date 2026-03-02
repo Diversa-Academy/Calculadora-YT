@@ -699,18 +699,17 @@
             const ideal = (idade * (renda * 12)) / 10;
             const ratio = ideal > 0 ? liq / ideal : 0;
             
-            const formData = new FormData(form);
+          const formData = new FormData(form); [cite: 138]
 
-            const agora = new Date();
-            const dataFormatada = agora.toLocaleDateString('pt-BR');
-            const horaFormatada = agora.toLocaleTimeString('pt-BR');
+// --- ADICIONE ESTAS 3 LINHAS ---
+const agora = new Date();
+formData.append("Data", agora.toLocaleDateString('pt-BR'));
+formData.append("Hora", agora.toLocaleTimeString('pt-BR'));
+// ------------------------------
 
-            formData.append("Data", dataFormatada);
-            formData.append("Hora", horaFormatada);
-            
-            formData.append("Patrimonio_Liquido", liq.toFixed(2));
-            formData.append("Patrimonio_Ideal", ideal.toFixed(2));
-            formData.append("Status_Ratio", ratio.toFixed(2));
+formData.append("Patrimonio_Liquido", liq.toFixed(2)); [cite: 138]
+formData.append("Patrimonio_Ideal", ideal.toFixed(2)); [cite: 138]
+formData.append("Status_Ratio", ratio.toFixed(2)); [cite: 138]
 
             try {
                 const response = await fetch("https://script.google.com/macros/s/AKfycbz0uWzZzw_t_PBbcIZhSGOzgRmUOKpAysROrH7pLT3BYphNNOSDvGNtOieatmUB7EuJ/exec", {
@@ -801,4 +800,5 @@
     </script>
 </body>
 </html>
+
 
