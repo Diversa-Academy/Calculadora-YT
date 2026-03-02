@@ -45,7 +45,6 @@
 
     <style>
         :root {
-            /* Paleta de Cores Rhian Private */
             --Diversa-dark: #001529;
             --Diversa-light: #00274d;
             --Diversa-yellow: #c5a059;
@@ -77,7 +76,6 @@
             min-height: 100vh;
         }
 
-        /* --- Header Hero & Logo --- */
         .hero {
             background: linear-gradient(135deg, var(--Diversa-dark) 0%, var(--Diversa-light) 100%);
             color: white;
@@ -110,7 +108,6 @@
             font-weight: 300;
         }
 
-        /* --- Container Principal --- */
         .container {
             max-width: 700px;
             margin: -50px auto 0;
@@ -131,7 +128,6 @@
             .logo-img { max-width: 220px; }
         }
 
-        /* --- Formulário --- */
         .section-title {
             font-size: 12px;
             text-transform: uppercase;
@@ -166,7 +162,6 @@
             font-size: 14px;
         }
 
-        /* Input Styling */
         .input-wrapper {
             position: relative;
             display: flex;
@@ -205,7 +200,6 @@
             box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15);
         }
 
-        /* Botão Principal */
         .btn {
             width: 100%;
             background: var(--Diversa-yellow);
@@ -241,7 +235,6 @@
             box-shadow: none;
         }
 
-        /* Spinner Loading */
         .spinner {
             display: none;
             width: 20px;
@@ -259,7 +252,6 @@
         
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* --- Resultados --- */
         #resultado {
             display: none;
             margin-top: 40px;
@@ -278,7 +270,6 @@
             margin-bottom: 30px;
         }
 
-        /* Gauge Chart */
         .gauge-wrapper {
             position: relative;
             width: 180px;
@@ -329,7 +320,6 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* Grid de Valores */
         .results-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -358,7 +348,6 @@
             margin-bottom: 30px;
         }
 
-        /* --- Faixa Próximo Passo --- */
         .next-step-strip {
             background: linear-gradient(135deg, var(--Diversa-dark), var(--Diversa-light));
             border-radius: 12px;
@@ -396,16 +385,6 @@
             margin-right: auto;
         }
 
-        .next-step-strip .email-note {
-            font-size: 12px;
-            color: var(--Diversa-yellow);
-            margin-bottom: 25px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-        }
-
         .btn-cta {
             background: white;
             color: var(--Diversa-dark);
@@ -429,7 +408,6 @@
             color: white;
         }
 
-        /* --- Rodapé --- */
         .footer-note {
             font-size: 11px;
             color: #888;
@@ -445,7 +423,6 @@
             color: var(--Diversa-dark);
         }
 
-        /* --- Toast Notification --- */
         .toast-container {
             position: fixed;
             bottom: 20px;
@@ -486,6 +463,7 @@
 
     <div class="container">
         <form id="calcForm" class="content">
+            <input type="hidden" id="data_registro" name="data_registro">
             
             <div class="section-title">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/></svg>
@@ -590,50 +568,20 @@
                 <div class="next-step-strip">
                     <h3>Próximo Passo: cuide das suas finanças com estratégia</h3>
                     <p class="subtitle">Você já sabe onde está. Agora descubra para onde ir.</p>
-                    <p class="description">Liberamos um acesso gratuito a relatórios, e conteúdos práticos para transformar números em decisões inteligentes, feitos para o seu perfil de investidor.</p>
-                   
-                    <a href="https://wa.me/554433466200?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20em%20investimentos%20para%20entender%20as%20melhores%20op%C3%A7%C3%B5es%20para%20o%20meu%20perfil." target="_blank" class="btn-cta">QUERO AVANÇAR PARA O PRÓXIMO PASSO</a>
+                    <p class="description">Liberamos um acesso gratuito a relatórios e conteúdos práticos para transformar números em decisões inteligentes.</p>
+                    <a href="https://wa.me/554433466200?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista." target="_blank" class="btn-cta">QUERO AVANÇAR</a>
                 </div>
-
             </div>
-
         </form>
     </div>
 
     <footer class="footer-note">
-        A fórmula de Patrimônio Ideal foi desenvolvida por Thomas J. Stanley e popularizada no livro "O Milionário Mora ao Lado". Ela calcula um valor de referência para seu Patrimônio Líquido (PL) e ajuda a verificar se você é um <strong>Acumulador Prodígio (PAR)</strong>, <strong>Médio (MAR)</strong> ou <strong>Sub-Acumulador (SAR)</strong>.
+        A fórmula de Patrimônio Ideal foi desenvolvida por Thomas J. Stanley. Ela calcula um valor de referência e ajuda a verificar se você é um <strong>PAR</strong>, <strong>MAR</strong> ou <strong>SAR</strong>.
     </footer>
 
     <div class="toast-container" id="toastContainer"></div>
 
     <script>
-        // --- RASTREIO DETALHADO (GOOGLE ANALYTICS) ---
-        document.querySelectorAll('input').forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.value.trim() !== "") {
-                    gtag('event', 'campo_preenchido', {
-                        'nome_campo': this.name,
-                        'valor_preenchido': 'sim'
-                    });
-                } else {
-                    gtag('event', 'campo_abandonado_vazio', {
-                        'nome_campo': this.name
-                    });
-                }
-            });
-        });
-
-        document.getElementById('btnEnviar').addEventListener('click', function() {
-            gtag('event', 'clique_confirmar_calculo', {
-                'status_formulario': document.getElementById('calcForm').checkValidity() ? 'valido' : 'invalido'
-            });
-            
-            // Disparar evento do Facebook Pixel ao clicar no botão
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Contact');
-            }
-        });
-
         // --- 1. UTILITÁRIOS ---
         function formatCurrency(input) {
             let value = input.value.replace(/\D/g, "");
@@ -674,6 +622,10 @@
         form.onsubmit = async (e) => {
             e.preventDefault();
             
+            // --- CAPTURA DATA E HORA PARA O FORMULÁRIO ---
+            const agora = new Date().toLocaleString('pt-BR');
+            document.getElementById('data_registro').value = agora;
+
             const btn = document.getElementById('btnEnviar');
             const btnText = btn.querySelector('span');
             const spinner = document.getElementById('btnSpinner');
@@ -699,40 +651,27 @@
             const ideal = (idade * (renda * 12)) / 10;
             const ratio = ideal > 0 ? liq / ideal : 0;
             
+            // PREPARAÇÃO DOS DADOS PARA O GOOGLE SHEETS
             const formData = new FormData(form);
             formData.append("Patrimonio_Liquido", liq.toFixed(2));
             formData.append("Patrimonio_Ideal", ideal.toFixed(2));
             formData.append("Status_Ratio", ratio.toFixed(2));
+            // Garante que o campo data_registro está indo no formData
+            formData.set("data_registro", agora);
 
             try {
                 const response = await fetch("https://script.google.com/macros/s/AKfycbz0uWzZzw_t_PBbcIZhSGOzgRmUOKpAysROrH7pLT3BYphNNOSDvGNtOieatmUB7EuJ/exec", {
                     method: "POST",
                     body: formData,
+                    mode: 'no-cors', // Importante para Google Apps Script
                     headers: { 'Accept': 'application/json' }
                 });
 
-                if (response.ok) {
-                    showToast("Dados enviados com sucesso!", "success");
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'calculadora',
-                        'event_label': 'calculo_realizado'
-                    });
-                    
-                    // Evento de Conversão (Lead) para o Facebook
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'Lead', {
-                            value: liq,
-                            currency: 'BRL'
-                        });
-                    }
-                } else {
-                    showToast("Erro ao enviar relatório, mas cálculo realizado.", "error");
-                }
-
+                showToast("Cálculo realizado com sucesso!", "success");
                 renderResults(liq, ideal, ratio);
 
             } catch (error) {
-                showToast("Sem conexão. Exibindo resultados offline.", "info");
+                showToast("Erro na conexão, exibindo resultados locais.", "info");
                 renderResults(liq, ideal, ratio);
             } finally {
                 btnText.innerText = "RECALCULAR";
@@ -765,20 +704,19 @@
             if (liq < 0) {
                 statusText = "Situação Crítica";
                 statusColor = "var(--danger)";
-                advice = "Atenção imediata! Suas dívidas são maiores que tudo o que você possui. Priorize a quitação de dívidas.";
-                displayPerc = 0; 
+                advice = "Atenção imediata! Suas dívidas superam seu patrimônio. Priorize a quitação de juros altos.";
             } else if (ratio < 0.5) {
                 statusText = "Sub-Acumulador (SAR)";
                 statusColor = "var(--danger)";
-                advice = "Você está acumulando menos da metade do recomendado para sua idade (SAR). Foque em aumentar sua taxa de poupança.";
+                advice = "Você está abaixo do recomendado para sua idade. Tente reduzir custos fixos e aumentar aportes.";
             } else if (ratio < 1) {
                 statusText = "Acumulador Médio (MAR)";
                 statusColor = "var(--warning)";
-                advice = "Você está no caminho certo (MAR), mas ainda há espaço para crescer. Tente aumentar seus investimentos mensais.";
+                advice = "Você está no caminho certo, mas ainda há espaço para otimizar seus investimentos.";
             } else {
                 statusText = "Acumulador Prodígio (PAR)";
                 statusColor = "var(--success)";
-                advice = "Parabéns! Você é um Acumulador Prodígio (PAR) e está acima da média para sua faixa etária.";
+                advice = "Excelente! Você é um Acumulador Prodígio e está muito acima da média nacional.";
             }
 
             st.innerText = statusText;
