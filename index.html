@@ -479,7 +479,7 @@
 <body>
 
     <section class="hero">
-        <img src="https://z-cdn-media.chatglm.cn/files/7b985d4d-7b02-48d0-9882-a1ca6b6704b6.png?auth_key=1869006265-960bd6f468a944dcbabfb96c68fb69623-0-30a930cee546be75348fe13891c965fc" alt="Diversa Academy" class="logo-img">
+        <img src="https://lh3.googleusercontent.com/u/0/d/1a4Li769dOueajeLEwqvgyrSkb8MzJWQU" alt="Diversa Academy" class="logo-img">
         <h1>Calculadora de <span>Patrimônio Ideal</span></h1>
         <p>Descubra sua posição financeira real em segundos.</p>
     </section>
@@ -700,6 +700,14 @@
             const ratio = ideal > 0 ? liq / ideal : 0;
             
             const formData = new FormData(form);
+
+            const agora = new Date();
+            const dataFormatada = agora.toLocaleDateString('pt-BR');
+            const horaFormatada = agora.toLocaleTimeString('pt-BR');
+
+            formData.append("Data", dataFormatada);
+            formData.append("Hora", horaFormatada);
+            
             formData.append("Patrimonio_Liquido", liq.toFixed(2));
             formData.append("Patrimonio_Ideal", ideal.toFixed(2));
             formData.append("Status_Ratio", ratio.toFixed(2));
@@ -793,3 +801,4 @@
     </script>
 </body>
 </html>
+
